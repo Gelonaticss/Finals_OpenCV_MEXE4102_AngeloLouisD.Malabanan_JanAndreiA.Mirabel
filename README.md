@@ -24,7 +24,9 @@
 
 ---
 
-[Back to Top](#top)
+<div align="right">
+  <a href="#top">⬆️ Back to Top</a>
+</div>
 
 ## Abstract
 
@@ -32,14 +34,18 @@
 - **Analyze and outline shapes** of small household objects using **contour detection** techniques.
 - Apply **OpenCV** to improve shape recognition accuracy and enhance the **visualization of object contours**.
 
-[Back to Top](#top)
+<div align="right">
+  <a href="#top">⬆️ Back to Top</a>
+</div>
 
 ### Approach
 - Utilize the **Small Home Objects (SHO) Image Dataset** from Kaggle.
 - Implement **OpenCV's contour detection algorithm** to highlight object shapes.
 - Process dataset images to ensure **preparation and compatibility** with contour algorithms.
 
-[Back to Top](#top)
+<div align="right">
+  <a href="#top">⬆️ Back to Top</a>
+</div>
 
 ### Expected Results
 - Accurate **outlining of object shapes** in the dataset.
@@ -48,7 +54,9 @@
 
 ---
 
-[Back to Top](#top)
+<div align="right">
+  <a href="#top">⬆️ Back to Top</a>
+</div>
 
 ## Project Methods
 
@@ -80,7 +88,9 @@
 
 ---
 
-[Back to Top](#top)
+<div align="right">
+  <a href="#top">⬆️ Back to Top</a>
+</div>
 
 ## References
 - OpenCV Documentation: [https://docs.opencv.org](https://docs.opencv.org)
@@ -89,4 +99,6 @@
 
 ---
 
-[Back to Top](#top)
+<div align="right">
+  <a href="#top">⬆️ Back to Top</a>
+</div>
