@@ -13,6 +13,10 @@
   - [Expected Results](#expected-results)
 - [Project Methods](#project-methods)
 - [Conclusion](#conclusion)
+  - [Summary Of Findings](#summary-of-findings)
+  - [Challenges](challenges)
+  - [Solutions](solutions)
+  - [Outcomes](outcomes)
 - [References](#references)
 - [Group Members](#group-members)
 
@@ -102,7 +106,7 @@
 
 ## Conclusion
 
-### Findings
+### Summary Of Findings
 - **Noise Issues:** The dataset contained a significant amount of noise, such as shadows, cracks, and objects blending with the background due to similar colors or lighting conditions.
 - **Complexity in Object Colors:** Objects with multiple shades, such as the statue, presented additional challenges in segmentation and contour detection.
 
