@@ -6,7 +6,6 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
-  - [Problem and Significance in Computer Vision](#problem-and-significance-in-computer-vision)
 - [Abstract](#abstract)
   - [Project's Objective](#projects-objective)
   - [Approach](#approach)
@@ -14,9 +13,9 @@
 - [Project Methods](#project-methods)
 - [Conclusion](#conclusion)
   - [Summary Of Findings](#summary-of-findings)
-  - [Challenges](challenges)
-  - [Solutions](solutions)
-  - [Outcomes](outcomes)
+  - [Challenges](#challenges)
+  - [Solutions](#solutions)
+  - [Outcomes](#outcomes)
 - [References](#references)
 - [Group Members](#group-members)
 
