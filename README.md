@@ -1,8 +1,8 @@
+
 <a id="top"></a>
 <div align="center">
   <h1>Outlining Shapes of Small Household Objects with Contours</h1>
 </div>
-
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -12,8 +12,9 @@
   - [Approach](#approach)
   - [Expected Results](#expected-results)
 - [Project Methods](#project-methods)
+- [Conclusion](#conclusion)
 - [References](#references)
-
+- [Group Members](#group-members)
 
 ---
 
@@ -77,17 +78,45 @@
   - Configure contour approximation parameters for accurate outlining.
   - Iterate through detected contours to highlight shapes.
 
-- **Step 4: Visualization and Annotation**
+- **Step 4: Filtering Noise**
+  - Use **erosion and dilation** to filter out small, irrelevant contours caused by noise such as cracks, shadows, or background inconsistencies.
+  - Apply conditional logic to focus on outlining larger shapes and ignore minor artifacts.
+
+- **Step 5: Visualization and Annotation**
   - Draw detected contours on the original images.
   - Label contours with indices for better analysis.
 
-- **Step 5: Result Evaluation**
+- **Step 6: Result Evaluation**
   - Evaluate the accuracy and quality of detected contours.
   - Compare results across different object types.
 
-- **Step 6: Documentation and Deployment**
+- **Step 7: Documentation and Deployment**
   - Document the process in a well-structured GitHub repository.
   - Ensure reproducibility by sharing code, datasets, and insights.
+
+---
+
+<div align="right">
+  <a href="#top">⬆️ Back to Top</a>
+</div>
+
+## Conclusion
+
+### Findings
+- **Noise Issues:** The dataset contained a significant amount of noise, such as shadows, cracks, and objects blending with the background due to similar colors or lighting conditions.
+- **Complexity in Object Colors:** Objects with multiple shades, such as the statue, presented additional challenges in segmentation and contour detection.
+
+### Challenges
+- **Segmentation Difficulties:** Shadows, cracks, and similar background-object colors led to difficulties in separating objects from their backgrounds.
+- **Contour Detection Limitations:** Smaller or irrelevant shapes, such as shadows and cracks, were often mistakenly included as contours.
+
+### Solutions
+- **Erosion and Dilation:** These operations helped reduce noise and improve the accuracy of contour detection.
+- **Conditional Contour Filtering:** A size threshold was applied to ignore smaller, irrelevant shapes and focus on outlining larger object contours.
+
+### Outcomes
+- Contours for most objects were successfully detected, providing a clear outline of shapes.
+- The implemented methods and strategies can serve as a basis for further improvements and applications in real-world scenarios.
 
 ---
 
@@ -98,9 +127,8 @@
 ## References
 - OpenCV Documentation: [Documentation](https://docs.opencv.org)
 - Kaggle Dataset: [Small Home Objects (SHO) Image Dataset](https://www.kaggle.com/datasets/hosseinmousavi/small-home-objects-sho-image-dataset)
-- Final Requirement instructions: [MeXEE402_Finals_4102](https://github.com/MikkoDT/MeXEE402_Finals_4102)
+- Final Requirement Instructions: [MeXEE402_Finals_4102](https://github.com/MikkoDT/MeXEE402_Finals_4102)
 - Additional resources on contour detection from OpenCV tutorials.
-   
 
 ---
 
