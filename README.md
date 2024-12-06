@@ -96,8 +96,17 @@
 - OpenCV Documentation: [https://docs.opencv.org](https://docs.opencv.org)
 - Kaggle Dataset: [Small Home Objects (SHO) Image Dataset](https://www.kaggle.com/datasets/hosseinmousavi/small-home-objects-sho-image-dataset)
 - Additional resources on contour detection from OpenCV tutorials.
+- Final Requirement instructions: [MeXEE402_Finals_4102](https://github.com/MikkoDT/MeXEE402_Finals_4102)
 
 ---
+
+<div align="right">
+  <a href="#top">⬆️ Back to Top</a>
+</div>
+
+## Group Members
+1. Malabanan, Angelo Louis D. (21-04184)
+2. Mirabel, Jan Andrei A. (21-02724)
 
 <div align="right">
   <a href="#top">⬆️ Back to Top</a>
