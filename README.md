@@ -96,7 +96,7 @@
 </div>
 
 ## References
-- OpenCV Documentation: [https://docs.opencv.org](https://docs.opencv.org)
+- OpenCV Documentation: [Documentation](https://docs.opencv.org)
 - Kaggle Dataset: [Small Home Objects (SHO) Image Dataset](https://www.kaggle.com/datasets/hosseinmousavi/small-home-objects-sho-image-dataset)
 - Final Requirement instructions: [MeXEE402_Finals_4102](https://github.com/MikkoDT/MeXEE402_Finals_4102)
 - Additional resources on contour detection from OpenCV tutorials.
