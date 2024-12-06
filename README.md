@@ -1,5 +1,8 @@
 <a id="top"></a>
-# Outlining Shapes of Small Household Objects with Contours
+<div align="center">
+  <h1>Outlining Shapes of Small Household Objects with Contours</h1>
+</div>
+
 
 ## Table of Contents
 - [Introduction](#introduction)
