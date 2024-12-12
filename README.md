@@ -151,7 +151,8 @@ from google.colab.patches import cv2_imshow
 # Load the Image
 # The image is loaded from the dataset folder.
 img = cv2.imread("file path")
-
+# Load the original image.
+orig_img = cv2.imread("file path")
 # Convert Image to Grayscale
 # Grayscale simplifies image processing tasks by reducing dimensions.
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
@@ -188,14 +189,38 @@ for cnt in contours:
 grayscale = cv2.putText(gray,"Grayscale Image",(25,150),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,255),2)
 thresho = cv2.putText(thresh,"Thresholded Image",(25,150),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,255),2)
 out = cv2.putText(img,"Outlined Image",(25,150),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,255),2)
+orig = cv2.putText(orig_img,"Original Image",(25,150),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,255),2)
 
 # Step 7: Display the Processed Images
 # Show the Grayscale, Thresholded, and Outlined images.
 
-cv2_imshow(grayscale)  # Display Grayscale Image
-cv2_imshow(thresho)    # Display Thresholded Image
-cv2_imshow(out)        # Display Image with Contours Outlined
+# Ensure both arrays have the same number of dimensions
+threshol = cv2.cvtColor(thresho, cv2.COLOR_GRAY2BGR)  # Convert grayscale to BGR
+
+# Combine the images horizontally
+display = np.hstack((orig_img, threshol, img))
+
+# Display the result
+cv2_imshow(display)
 ```
+### Results
+- **Our project includes a diverse dataset comprising the following categories: Handwatch,  Webcam, Gamepad, Mic, Console, Statue, Vitamins, Ball, Earmuff, Quadcopter, Sharpener, Sunglasses, and Tripod.**
+
+| Category     | Processed Image                                   |
+|--------------|-----------------------------------------------|
+| **Handwatch**| ![Handwatch](https://github.com/user-attachments/assets/9a08a7b7-04fc-4976-afa7-7392d3b50264) |
+| **Webcam**   | ![Webcam](https://github.com/user-attachments/assets/2bbe3ae5-8e62-445c-95ea-b65212928807) |
+| **Gamepad**   | ![image](https://github.com/user-attachments/assets/552763b4-e64f-4fb9-b9f6-3a8de3d0cecf) |
+| **Mic**   | ![image](https://github.com/user-attachments/assets/12f6d43f-c25c-4181-927f-e16b3178ab19) |
+| **Console**| !![image](https://github.com/user-attachments/assets/542f16f7-db48-4655-b039-515f44c1d136) |
+| **Statue**   | ![image](https://github.com/user-attachments/assets/0603beef-a5e2-46c0-93c5-a87aba4ff4f9) |
+| **Vitamins**   | ![image](https://github.com/user-attachments/assets/942131a2-6460-4bbb-b461-cb111425e9da) |
+| **Ball**   | ![image](https://github.com/user-attachments/assets/91edcbe5-1413-4647-8cf0-023b6f0f2d2e) |
+| **Earmuff**| ![image](https://github.com/user-attachments/assets/f352a077-df62-4812-8d7b-ea5bb2272d00) |
+| **Quadcopter**   | ![image](https://github.com/user-attachments/assets/050e6ea8-b565-4bc6-8c2f-e03dd487e583) |
+| **Sharpener**   | ![image](https://github.com/user-attachments/assets/b4e4788a-04f8-48ab-a66b-bfdd54eb1aaf) |
+| **Sunglass**   | ![image](https://github.com/user-attachments/assets/eb533b8d-6caf-45a6-b52a-29a0ed9a10b7) |
+| **Tripod**| ![image](https://github.com/user-attachments/assets/499fcb47-7e31-4182-ad11-2fcbd01f5b32) |
 
 ---
 <div align="right">
