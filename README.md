@@ -16,6 +16,7 @@
   - [Challenges](#challenges)
   - [Solutions](#solutions)
   - [Outcomes](#outcomes)
+- [Additional Materials](#additional-materials)
 - [References](#references)
 - [Group Members](#group-members)
 
@@ -122,6 +123,10 @@
 - The implemented methods and strategies can serve as a basis for further improvements and applications in real-world scenarios.
 
 ---
+<div align="right">
+  <a href="#top">⬆️ Back to Top</a>
+</div>
+
 ## Additional Materials
 
 ### Cloning the Repository
