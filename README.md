@@ -122,7 +122,11 @@
 - The implemented methods and strategies can serve as a basis for further improvements and applications in real-world scenarios.
 
 ---
+## Additional Materials
 
+
+
+---
 <div align="right">
   <a href="#top">⬆️ Back to Top</a>
 </div>
