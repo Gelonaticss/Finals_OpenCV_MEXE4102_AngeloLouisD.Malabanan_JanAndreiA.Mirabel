@@ -124,7 +124,78 @@
 ---
 ## Additional Materials
 
+### Cloning the Repository
+> *This code is used to clone the GitHub repository that contains the dataset.*
+```python
+#Step 1: Clone the Project Repository
+# Cloning the repository containing the dataset and project files.
+!git clone https://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@github.com/Gelonaticss/Finals_OpenCV_MEXE4102_AngeloLouisD.Malabanan_JanAndreiA.Mirabel.git
 
+# Change the directory to the cloned repository
+%cd Finals_OpenCV_MEXE4102_AngeloLouisD.Malabanan_JanAndreiA.Mirabel/
+
+# Clear output for cleaner notebook display
+from IPython.display import clear_output
+clear_output()
+```
+### Application of outlining shapes of small household objects with contours in Handwatch
+> *The "file path" should be updated to match the location of the image that will be processed.*
+```python
+# Step 2: Import Required Libraries
+# Importing the OpenCV library for image processing and NumPy for numerical operations.
+import cv2
+import numpy as np
+from google.colab.patches import cv2_imshow
+
+# Step 3: Load and Process the Image
+# Load the Image
+# The image is loaded from the dataset folder.
+img = cv2.imread("file path")
+
+# Convert Image to Grayscale
+# Grayscale simplifies image processing tasks by reducing dimensions.
+gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+
+# Apply Thresholding
+# Thresholding creates a binary image for contour detection.
+ret, thresh = cv2.threshold(gray, 50, 255, 1)
+
+# Step 4: Reduce Noise with Morphological Operations
+# Erosion
+# Reduces noise by eroding boundaries.
+kernel = np.ones((5,5), np.uint8)
+erode_image = cv2.erode(thresh,kernel, iterations=1)
+
+# Dilation
+# Expands contours and fills small gaps.
+dilate_image = cv2.dilate(erode_image, kernel, iterations=1)
+
+# Step 5: Detect and Draw Contours
+# Find Contours
+# Contours are detected from the processed binary image.
+contours,h = cv2.findContours(dilate_image,1,2)
+
+# ### Filter and Draw Contours
+# Contours are filtered by area and dimensions before being outlined on the original image.
+for cnt in contours:
+    x, y, w, h = cv2.boundingRect(cnt)  # Get bounding rectangle for each contour
+    area = cv2.contourArea(cnt)        # Calculate contour area
+    if area > 500 and w > 10:          # Filter contours by area and width
+        cv2.drawContours(img, [cnt], 0, (255, 255, 0), 4)  # Draw contours with yellow color
+
+# Step 6: Annotate Images for Visualization
+# Add captions to each image for better understanding of the stages.
+grayscale = cv2.putText(gray,"Grayscale Image",(25,150),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,255),2)
+thresho = cv2.putText(thresh,"Thresholded Image",(25,150),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,255),2)
+out = cv2.putText(img,"Outlined Image",(25,150),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,255),2)
+
+# Step 7: Display the Processed Images
+# Show the Grayscale, Thresholded, and Outlined images.
+
+cv2_imshow(grayscale)  # Display Grayscale Image
+cv2_imshow(thresho)    # Display Thresholded Image
+cv2_imshow(out)        # Display Image with Contours Outlined
+```
 
 ---
 <div align="right">
